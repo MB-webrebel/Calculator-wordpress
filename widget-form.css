@@ -1,0 +1,30 @@
+#MLCalcForm *, #MLCalcForm LABEL, #MLCalcForm INPUT, #MLCalcForm SELECT, #MLCalcForm OPTION, #MLCalcForm TD { font-family: Tahoma, sans-serif; font-size: 14px; color: #000000; font-weight: normal; line-height: normal; }
+#MLCalcClose  { display: none; color: #F5F5F5; font-size: 18px; font-weight: bold; font-family: Arial; cursor: pointer; position: absolute; background: #D5D5D5; border: 1px solid #D5D5D5; z-index: 10002; text-align: center; line-height: 24px }
+#MLCalcShader { background: #000000; display: none; position: absolute; z-index: 10000; margin: 0; padding: 0; }
+#MLCalcHolder { background: transparent; display: none; position: absolute; z-index: 10001; margin: 0; padding: 0; background: url(https://www.mlcalc.com/themes/mlcalc/images/ajax-loader.gif); background-repeat: no-repeat; background-position: center; text-align:center }
+
+#MLCalcForm .nobg, #MLCalcForm TABLE { background: none; }
+#MLCalcForm FORM, #MLCalcForm TD, #MLCalcForm DIV, #MLCalcForm IMG  { padding: 0; margin: 0; border: 0; background: transparent; }
+#MLCalcForm TABLE { border-collapse: collapse; margin: 0; width: auto; height: auto; border: 0; }
+#MLCalcForm SELECT { width: auto; background: #FFFFFF; font-family: Tahoma, sans-serif; font-size: 14px; height: 30px; border-radius: 5px;border: 1px solid #d5d5d5; }
+#MLCalcForm INPUT { padding: 1px; margin: auto; background: #FFFFFF; width: auto; height: 30px; font-family: Tahoma, sans-serif; font-size: 14px; padding-left: 6px; margin-bottom: 3px; border-radius: 5px; border: 1px solid #d5d5d5; }
+#MLCalcForm INPUT.sbmButton { background: #E5E5E5; border: 1px solid #D5D5D5; margin: 0; padding: 5px; padding-left: 20px; padding-right: 20px; font-weight: bold; height: 36px; }
+
+#MLCalcForm #downPaymentValue { color: #BBBBBB; }
+#MLCalcForm .disabled { color: #808080; }
+#MLCalcForm .formPlaceHolder, #MLCalcForm #formPlaceHolder { background-color: #F5F5F5; text-align: center; }
+#MLCalcForm .formFields TD { padding: 5px }
+#MLCalcForm LABEL { white-space: nowrap; text-align: right; }
+#MLCalcForm #mlcalcCopyright { text-align: right; padding-right: 10px; }
+#MLCalcForm .right { text-align: right; }
+#MLCalcForm .center { text-align: center; }
+#MLCalcForm IMG { max-width: none; width: auto; border: 0; background: none; box-shadow: none; margin: 0; padding: 0; }
+#MLCalcForm .zeroHeight { line-height: 0; height: auto; }
+#mlcalcWidgetHolder .secondaryLink { display: none; }
+#MLCalcForm .mlcalcCopyright { padding-right: 10px; text-align: right; }
+#MLCalcForm .mlcalcCopyright, #MLCalcForm .mlcalcCopyright A { font-size: 9px; color: #EAEAEA; cursor: default; text-decoration: none; }
+#MLCalcForm .ratesLink { font-size: 10px; color: #005CD4; border-bottom: 1px dashed #005CD4; cursor: pointer; }
+#MLCalcForm MAP {display:none}
+#MLCalcForm A {border:0; box-shadow: none; background: none;padding: 0;margin: 0;display: inline;cursor: default}
+#MLCalcForm TR {border-bottom: none}
+#MLCalcForm INPUT {display: inline}
