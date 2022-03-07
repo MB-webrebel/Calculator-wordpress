@@ -1,0 +1,198 @@
+.lidd_mc_form_responsive {
+	width: 100%;
+}
+
+.lidd_mc_input {
+	margin-bottom: 1rem;
+}
+
+.lidd_mc_input label {
+	display: block;
+	margin-bottom: .25em;
+}
+
+.lidd_mc_input_light input[type="text"] {
+	padding: .6em;
+	margin-bottom: 1em;
+    height: 2.4em;
+	color: #333;
+	background: #fff;
+	border: 1px solid #ddd;
+}
+
+.lidd_mc_input_dark input[type="text"] {
+	padding: .6em;
+	margin-bottom: 1em;
+    height: 2.4em;
+	color: #fff;
+	background: #000;
+	border: 1px solid #333;
+}
+
+.lidd_mc_input_responsive input[type="text"] {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.lidd_mc_select_responsive {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.lidd_mc_select_responsive select {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+
+.lidd_mc_select_fancy_light select,
+.lidd_mc_select_fancy_dark select {
+	position: relative;
+	z-index: 1000;
+	width: 110%;
+    max-width: 110%;
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: none;
+	-webkit-appearance: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ie-box-shadow: none;
+	box-shadow: none;
+}
+
+.lidd_mc_select_fancy_dark select {
+	color: #fff;
+}
+
+.lidd_mc_select_fancy_light,
+.lidd_mc_select_fancy_dark {
+	display: block;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 100;
+	width: 100%;
+	padding: .35em .5em .35em .5em;
+	margin-bottom: 1em;
+    height: 2.4em;
+	overflow: hidden;
+	line-height: 1em;
+}
+
+.lidd_mc_select_fancy_light {
+	background: #fff;
+	border: 1px solid #ddd;
+}
+
+.lidd_mc_select_fancy_dark {
+	color: #fff;
+	background: #000;
+	border: 1px solid #333;
+}
+
+.lidd_mc_select_fancy_light select:focus,
+.lidd_mc_select_fancy_dark select:focus {
+	outline: none;
+}
+
+.lidd_mc_select_fancy_light:before,
+.lidd_mc_select_fancy_dark:before {
+	content: '';
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 2em;
+	height: 100%;
+}
+
+.lidd_mc_select_fancy_light:after,
+.lidd_mc_select_fancy_dark:after {
+	content: '';
+	display: block;
+	position: absolute;
+	right: .55em;
+	top: 0.85em;
+	border-bottom: .4em solid transparent;
+	border-right: .4em solid transparent;
+	border-left: .4em solid transparent;
+}
+
+.lidd_mc_select_fancy_light:after {
+	border-top: .4em solid #333;
+}
+.lidd_mc_select_fancy_dark:after {
+	border-top: .4em solid #fff;
+}
+
+.lidd_mc_top_dot5em:after {
+	top: 0.5em
+}
+.lidd_mc_top_dot65em:after {
+	top: 0.65em
+}
+.lidd_mc_top_dot75em:after {
+	top: 0.75em
+}
+.lidd_mc_top_dot85em:after {
+	top: 0.85em
+}
+.lidd_mc_top_1em:after {
+	top: 1em
+}
+
+.lidd_mc_error {
+	display: block;
+	margin: .25em 0 .5em 0;
+	color: #900;
+}
+
+#lidd_mc_inspector A {
+    cursor: default;
+    pointer-events: none;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.lidd_mc_details {
+	position: relative;
+	margin-top: 2em;
+}
+
+#lidd_mc_inspector, #lidd_mc_popup {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.lidd_mc_summary {
+	box-sizing: border-box;
+	width: 100%;
+	height: auto;
+	padding: 1em 1em 0 1em;
+	margin: 0 0 1em 0;
+}
+
+.lidd_mc_summary_light {
+	color: #333;
+	background: #fff;
+	border: 1px solid #ddd;
+}
+
+.lidd_mc_summary_dark {
+	color: #fff;
+	background: #000;
+	border: 1px solid #333;
+}
+
+.lidd_mc_b {
+	font-weight: bold;
+}
+
+#MLCalcClose  { display: none; color: #F5F5F5; font-size: 18px; font-weight: bold; font-family: Arial; cursor: pointer; position: absolute; background: #D5D5D5; border: 1px solid #D5D5D5; z-index: 10002; text-align: center; padding-top: 0px; padding-bottom: 5px; }
+#MLCalcShader { background: #000000; display: none; position: absolute; z-index: 10000; margin: 0; padding: 0; }
+#MLCalcHolder { background: transparent; display: none; position: absolute; z-index: 10001; margin: 0; padding: 0; background: url(../img/ajax_loader.gif); background-repeat: no-repeat; background-position: center; text-align:center }
+#lidd_mc_mlc_form { display: none }

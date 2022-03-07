@@ -1,28 +1,95 @@
 <?php
-function ccb_widgets_load()
-{
-    // Check required version
-    $elementor_version_required = '2.6.7';
-    if ( defined('ELEMENTOR_VERSION') && ! version_compare( ELEMENTOR_VERSION, $elementor_version_required, '>=' ) ) {
-        add_action( 'admin_notices', 'ccb_widgets_fail_load_out_of_date' );
-        return;
-    }
 
-    // Require the main plugin file
-    require( CALC_DIR . '/includes/classes/plugin.php' );
+defined('ABSPATH') or die("...");
+
+/**
+ * This file creates the widget.
+ *
+ * @package Lidd's Mortgage Calculator
+ * @since 2.0.0
+ */
+
+// Call the hook to register the widget.
+add_action( 'widgets_init', 'lidd_mc_register_widget' );
+
+/**
+ * Callback function to register the widget.
+ */
+function lidd_mc_register_widget() {
+	register_widget( 'lidd_mc_widget' );
 }
 
-function ccb_widgets_fail_load_out_of_date()
+/**
+ * Create the widget class.
+ */
+class lidd_mc_widget extends WP_Widget
 {
-    if ( ! current_user_can( 'update_plugins' ) ) {
-        return;
-    }
-
-    $file_path = 'elementor/elementor.php';
-
-    $upgrade_link = wp_nonce_url( self_admin_url( 'update.php?action=upgrade-plugin&plugin=' ) . $file_path, 'upgrade-plugin_' . $file_path );
-    $message = '<p>' . __( 'Elementor CCB Widgets is not working because you are using an old version of Elementor.', 'cost-calculator' ) . '</p>';
-    $message .= '<p>' . sprintf( '<a href="%s" class="button-primary">%s</a>', $upgrade_link, __( 'Update Elementor Now', 'cost-calculator' ) ) . '</p>';
-
-    echo '<div class="error">' . $message . '</div>';
+	
+	/**
+	 * Constructor
+	 */
+	function __construct()
+	{
+		$widget_options = array(
+			'classname' => 'lidd_mc_widget',
+			'description' => __( 'Display a responsive mortgage calculator.', 'responsive-mortgage-calculator' )
+		);
+		
+		// Pass the options to WP_Widget to create the widget.
+		parent::__construct( 'lidd_mc_widget', __( 'Responsive Mortgage Calculator', 'responsive-mortgage-calculator' ) );
+	}
+	
+	/**
+	 * Build the widget settings form.
+	 *
+	 * Responsible for creating the elements of the widget settings form.
+	 */
+	function form( $instance )
+	{
+		$defaults = array( 'title' => __( 'Calculate Mortgage Payments', 'responsive-mortgage-calculator' ) );
+		$instance = wp_parse_args( (array) $instance, $defaults );
+		$title = $instance['title'];
+		
+		// Exit PHP and display the widget settings form.
+		?>
+		
+		<p><?php _e( 'Title' ); ?>: <input class="widefat" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" /></p>
+		
+		<?php
+		
+	}
+	
+	/**
+	 * A method to save the settings.
+	 */
+	function update( $new_instance, $old_instance )
+	{
+		$instance = $old_instance;
+		$instance['title'] = strip_tags( $new_instance['title'] );
+		
+		return $instance;
+		
+	}
+	
+	/**
+	 * A method to display the widget on the front end.
+	 */
+	function widget( $args, $instance )
+	{
+		extract( $args );
+		
+		echo $before_widget;
+		
+		$title = apply_filters( 'widget_title', $instance['title'] );
+		if ( !empty( $title ) ) {
+			echo $before_title . $title . $after_title;
+		}
+		
+		// Display the widget form.
+		echo lidd_mc_display_form();
+		
+		echo $after_widget;
+		
+	}
+	
 }
